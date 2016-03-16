@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Signika:400,300);
+h1 {
+  font-family: 'Signika', sans-serif;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: 'Signika';
+  font-weight: 300;
+}
+
+h6 {
+  font-family: "Signika";
+  font-weight: 400;
+}
