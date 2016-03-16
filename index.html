@@ -21,21 +21,7 @@
       </style>
   </head>
 <body>
-  <script type="text/javascript">
-    var charList = document.querySelectorAll(".btn.btn-default");
-    
-    for (var i = 0; i < charList.length; i++) {
-    	charList[i].onclick = function() {
-      appendChar(this.id, this.innerHTML.trim());
-      };
-    };
-    
-    
-    function appendChar(eng, kor) {
-      document.getElementById("englishtext").innerHTML = document.getElementById("englishtext").innerHTML + eng;
-      document.getElementById("koreantext").innerHTML = document.getElementById("koreantext").innerHTML + kor;
-    }
-  </script>
+  
     <div class="row">
       <h1 class="text-primary text-center col-xs-8">
     Korean Romaji Pronunciation
@@ -161,7 +147,21 @@
     
         </div>
       </div>
-    
     </div>
+    <script type="text/javascript">
+    var charList = document.querySelectorAll(".btn.btn-default");
+    
+    for (var i = 0; i < charList.length; i++) {
+    	charList[i].onclick = function() {
+      appendChar(this.id, this.innerHTML.trim());
+      };
+    };
+    
+    
+    function appendChar(eng, kor) {
+      document.getElementById("englishtext").innerHTML = document.getElementById("englishtext").innerHTML + eng;
+      document.getElementById("koreantext").innerHTML = document.getElementById("koreantext").innerHTML + kor;
+    }
+  </script>
   </body>
 </html>
