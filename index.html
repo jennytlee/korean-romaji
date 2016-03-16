@@ -21,133 +21,147 @@
       </style>
   </head>
 <body>
-  <script src="/korean-romaji/script.js"></script>
-<div class="row">
-  <h1 class="text-primary text-center col-xs-8">
-Korean Romaji Pronunciation
-</h1>
-  <h4 class="col-xs-4 text-center text-info">
-Learn to pronounce Korean characters in minutes!
-</h4>
-</div>
-
-<div class="well well-sm">
-  <div class="btn-group">
-    <button id='g' type="button" class="btn btn-default">
-      ㄱ
-    </button>
-    <button id='gg' type="button" class="btn btn-default">
-      ㄲ
-    </button>
-    <button id='n' type="button" class="btn btn-default">
-      ㄴ
-    </button>
-    <button id='d' type="button" class="btn btn-default">
-      ㄷ
-    </button>
-    <button id='dd' type="button" class="btn btn-default">
-      ㄸ
-    </button>
-    <button id='r' type="button" class="btn btn-default">
-      ㄹ
-    </button>
-    <button id='b' type="button" class="btn btn-default">
-      ㅂ
-    </button>
-    <button id='bb' type="button" class="btn btn-default">
-      ㅃ
-    </button>
-    <button id='s' type="button" class="btn btn-default">
-      ㅅ
-    </button>
-    <button id='ss' type="button" class="btn btn-default">
-      ㅆ
-    </button>
-    <button id='null' type="button" class="btn btn-default">
-      ㅇ
-    </button>
-    <button id='j' type="button" class="btn btn-default">
-      ㅈ
-    </button>
-    <button id='jj' type="button" class="btn btn-default">
-      ㅉ
-    </button>
-    <button id='ch' type="button" class="btn btn-default">
-      ㅊ
-    </button>
-    <button id='k' type="button" class="btn btn-default">
-      ㅋ
-    </button>
-    <button id='t' type="button" class="btn btn-default">
-      ㅌ
-    </button>
-    <button id='p' type="button" class="btn btn-default">
-      ㅍ
-    </button>
-    <button id='h' type="button" class="btn btn-default">
-      ㅎ
-    </button>
-  </div>
-</div>
-
-<div class="well well-sm">
-  <div class="btn-group">
-    <button id='ah' type="button" class="btn btn-default">
-      ㅏ
-    </button>
-    <button id='yah' type="button" class="btn btn-default">
-      ㅑ
-    </button>
-    <button id='uh' type="button" class="btn btn-default">
-      ㅓ
-    </button>
-    <button id='yuh' type="button" class="btn btn-default">
-      ㅕ
-    </button>
-    <button id='o' type="button" class="btn btn-default">
-      ㅗ
-    </button>
-    <button id='yo' type="button" class="btn btn-default">
-      ㅛ
-    </button>
-    <button id='oo' type="button" class="btn btn-default">
-      ㅜ
-    </button>
-    <button id='yoo' type="button" class="btn btn-default">
-      ㅠ
-    </button>
-    <button id='i' type="button" class="btn btn-default">
-      ㅣ
-    </button>
-    <button id='eu' type="button" class="btn btn-default">
-      ㅡ
-    </button>
-    <button id='eh' type="button" class="btn btn-default">
-      ㅐ/ㅔ
-    </button>
-    <button id='yeh' type="button" class="btn btn-default">
-      ㅒ/ㅖ
-    </button>
-  </div>
-</div>
-<div class="well well-sm">
-  <div class="row">
-    <div id='korean' class="col-xs-3">
-      Korean:
+  <script type="text/javascript">
+    var charList = document.querySelectorAll(".btn.btn-default");
+    
+    for (var i = 0; i < charList.length; i++) {
+    	charList[i].onclick = function() {
+      appendChar(this.id, this.innerHTML.trim());
+      };
+    };
+    
+    
+    function appendChar(eng, kor) {
+      document.getElementById("englishtext").innerHTML = document.getElementById("englishtext").innerHTML + eng;
+      document.getElementById("koreantext").innerHTML = document.getElementById("koreantext").innerHTML + kor;
+    }
+  </script>
+    <div class="row">
+      <h1 class="text-primary text-center col-xs-8">
+    Korean Romaji Pronunciation
+    </h1>
+      <h4 class="col-xs-4 text-center text-info">
+    Learn to pronounce Korean characters in minutes!
+    </h4>
     </div>
-    <div id='koreantext' class='col-xs-9'>
-
+    
+    <div class="well well-sm">
+      <div class="btn-group">
+        <button id='g' type="button" class="btn btn-default">
+          ㄱ
+        </button>
+        <button id='gg' type="button" class="btn btn-default">
+          ㄲ
+        </button>
+        <button id='n' type="button" class="btn btn-default">
+          ㄴ
+        </button>
+        <button id='d' type="button" class="btn btn-default">
+          ㄷ
+        </button>
+        <button id='dd' type="button" class="btn btn-default">
+          ㄸ
+        </button>
+        <button id='r' type="button" class="btn btn-default">
+          ㄹ
+        </button>
+        <button id='b' type="button" class="btn btn-default">
+          ㅂ
+        </button>
+        <button id='bb' type="button" class="btn btn-default">
+          ㅃ
+        </button>
+        <button id='s' type="button" class="btn btn-default">
+          ㅅ
+        </button>
+        <button id='ss' type="button" class="btn btn-default">
+          ㅆ
+        </button>
+        <button id='null' type="button" class="btn btn-default">
+          ㅇ
+        </button>
+        <button id='j' type="button" class="btn btn-default">
+          ㅈ
+        </button>
+        <button id='jj' type="button" class="btn btn-default">
+          ㅉ
+        </button>
+        <button id='ch' type="button" class="btn btn-default">
+          ㅊ
+        </button>
+        <button id='k' type="button" class="btn btn-default">
+          ㅋ
+        </button>
+        <button id='t' type="button" class="btn btn-default">
+          ㅌ
+        </button>
+        <button id='p' type="button" class="btn btn-default">
+          ㅍ
+        </button>
+        <button id='h' type="button" class="btn btn-default">
+          ㅎ
+        </button>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div id='english' class="col-xs-3">
-      English:
+    
+    <div class="well well-sm">
+      <div class="btn-group">
+        <button id='ah' type="button" class="btn btn-default">
+          ㅏ
+        </button>
+        <button id='yah' type="button" class="btn btn-default">
+          ㅑ
+        </button>
+        <button id='uh' type="button" class="btn btn-default">
+          ㅓ
+        </button>
+        <button id='yuh' type="button" class="btn btn-default">
+          ㅕ
+        </button>
+        <button id='o' type="button" class="btn btn-default">
+          ㅗ
+        </button>
+        <button id='yo' type="button" class="btn btn-default">
+          ㅛ
+        </button>
+        <button id='oo' type="button" class="btn btn-default">
+          ㅜ
+        </button>
+        <button id='yoo' type="button" class="btn btn-default">
+          ㅠ
+        </button>
+        <button id='i' type="button" class="btn btn-default">
+          ㅣ
+        </button>
+        <button id='eu' type="button" class="btn btn-default">
+          ㅡ
+        </button>
+        <button id='eh' type="button" class="btn btn-default">
+          ㅐ/ㅔ
+        </button>
+        <button id='yeh' type="button" class="btn btn-default">
+          ㅒ/ㅖ
+        </button>
+      </div>
     </div>
-    <div id='englishtext' class='col-xs-9'>
-
+    <div class="well well-sm">
+      <div class="row">
+        <div id='korean' class="col-xs-3">
+          Korean:
+        </div>
+        <div id='koreantext' class='col-xs-9'>
+    
+        </div>
+      </div>
+      <div class="row">
+        <div id='english' class="col-xs-3">
+          English:
+        </div>
+        <div id='englishtext' class='col-xs-9'>
+    
+        </div>
+      </div>
+    
     </div>
-  </div>
-
-</div>
-</body>
+  </body>
 </html>
